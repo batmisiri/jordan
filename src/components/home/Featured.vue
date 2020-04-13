@@ -1,22 +1,25 @@
 <template>
   <section class="text-left">
-    <b-container>
-      <b-row>
-        <b-col cols="10"><h1 class="heading">Featured Programs</h1></b-col>
-        <b-col cols="2 text-right"></b-col>
-      </b-row>
-    </b-container>
+    <heading
+      heading="Featured Programs"
+      btnText="View All"
+      btnLink="#"
+    ></heading>
+
     <div class="featured-wrap">
       <b-container>
         <b-row>
           <b-col>
-            <carousel :items="4" :nav="true" :dots="false" :margin="20">
+            <carousel :items="4" :nav="false" :dots="false" :margin="20">
               <div class="featured-box">
                 <h2>Weekend In Joradn</h2>
                 <figure>
                   <img src="../../assets/0015.png" alt="" />
                   <figcaption>
-                    <book-now-btn text="Book Now"></book-now-btn>
+                    <div class="price-start">
+                      starting from <strong> $240</strong>,00
+                    </div>
+                    <book-now-btn>Book Now</book-now-btn>
                   </figcaption>
                 </figure>
               </div>
@@ -25,7 +28,10 @@
                 <figure>
                   <img src="../../assets/0016.png" alt="" />
                   <figcaption>
-                    <book-now-btn text="Book Now"></book-now-btn>
+                    <div class="price-start">
+                      starting from <strong> $240</strong>,00
+                    </div>
+                    <book-now-btn>Book Now</book-now-btn>
                   </figcaption>
                 </figure>
               </div>
@@ -34,7 +40,10 @@
                 <figure>
                   <img src="../../assets/0017.png" alt="" />
                   <figcaption>
-                    <book-now-btn text="Book Now"></book-now-btn>
+                    <div class="price-start">
+                      starting from <strong> $240</strong>,00
+                    </div>
+                    <book-now-btn>Book Now</book-now-btn>
                   </figcaption>
                 </figure>
               </div>
@@ -43,7 +52,10 @@
                 <figure>
                   <img src="../../assets/0018.png" alt="" />
                   <figcaption>
-                    <book-now-btn text="Book Now"></book-now-btn>
+                    <div class="price-start">
+                      starting from <strong> $240</strong>,00
+                    </div>
+                    <book-now-btn>Book Now</book-now-btn>
                   </figcaption>
                 </figure>
               </div>
@@ -52,7 +64,10 @@
                 <figure>
                   <img src="../../assets/0015.png" alt="" />
                   <figcaption>
-                    <book-now-btn text="Book Now"></book-now-btn>
+                    <div class="price-start">
+                      starting from <strong> $240</strong>,00
+                    </div>
+                    <book-now-btn>Book Now</book-now-btn>
                   </figcaption>
                 </figure>
               </div>
@@ -61,7 +76,10 @@
                 <figure>
                   <img src="../../assets/0015.png" alt="" />
                   <figcaption>
-                    <book-now-btn text="Book Now"></book-now-btn>
+                    <div class="price-start">
+                      starting from <strong> $240</strong>,00
+                    </div>
+                    <book-now-btn>Book Now</book-now-btn>
                   </figcaption>
                 </figure>
               </div>
@@ -76,9 +94,10 @@
 <script>
 import carousel from "vue-owl-carousel";
 import Button from "../common/Button";
+import heading from "./Heading";
 
 export default {
-  components: { carousel, "book-now-btn": Button }
+  components: { carousel, "book-now-btn": Button, heading }
 };
 </script>
 
@@ -106,6 +125,15 @@ export default {
         right: 20px;
         bottom: -30px;
         position: absolute;
+      }
+      .price-start {
+        color: #fff;
+        position: absolute;
+        right: 20px;
+        bottom: 30px;
+        strong {
+          font-size: 35px;
+        }
       }
     }
   }

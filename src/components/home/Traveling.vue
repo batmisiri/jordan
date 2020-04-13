@@ -18,7 +18,7 @@
           </li>
         </ul>
       </div>
-      <book-now-btn text="All Benefits"></book-now-btn>
+      <book-now-btn>All Benefits</book-now-btn>
     </div>
   </b-col>
 </template>

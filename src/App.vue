@@ -4,14 +4,19 @@
       <top-header></top-header>
     </div>
     <router-view />
+    <footer>
+      <top-footer></top-footer>
+    </footer>
   </div>
 </template>
 
 <script>
 import TopHeader from "./components/common/TopHeader.vue";
+import TopFooter from "./components/common/TopFooter";
 export default {
   components: {
-    "top-header": TopHeader
+    "top-header": TopHeader,
+    "top-footer": TopFooter
   }
 };
 </script>

@@ -45,6 +45,16 @@
       </b-container>
     </section>
     <featured></featured>
+
+    <section>
+      <premium-experience></premium-experience>
+    </section>
+    <section>
+      <travellers-use></travellers-use>
+    </section>
+    <section>
+      <featured-in></featured-in>
+    </section>
   </div>
 </template>
 
@@ -52,8 +62,18 @@
 import Mood from "../components/home/Mood.vue";
 import Traveling from "../components/home/Traveling.vue";
 import Featured from "../components/home/Featured";
+import PremiumExperience from "../components/home/PremiumExperience";
+import TravellersUse from "../components/home/TravellersUse";
+import FeaturedIn from "../components/home/FeaturedIn";
 export default {
   name: "Home",
-  components: { mood: Mood, traveling: Traveling, featured: Featured }
+  components: {
+    mood: Mood,
+    traveling: Traveling,
+    featured: Featured,
+    "premium-experience": PremiumExperience,
+    "travellers-use": TravellersUse,
+    "featured-in": FeaturedIn
+  }
 };
 </script>

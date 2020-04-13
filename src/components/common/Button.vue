@@ -1,20 +1,6 @@
 <template>
-  <b-link class="book-now">{{ text }}</b-link>
+  <b-link class="book-now"><slot></slot></b-link>
 </template>
-
-<script>
-export default {
-  name: "Button",
-  props: {
-    text: String
-  },
-  data() {
-    return {
-      name: ""
-    };
-  }
-};
-</script>
 
 <style lang="scss">
 a {
