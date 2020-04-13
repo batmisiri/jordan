@@ -1,12 +1,20 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <top-header></top-header>
     </div>
     <router-view />
   </div>
 </template>
+
+<script>
+import TopHeader from "./components/common/TopHeader.vue";
+export default {
+  components: {
+    "top-header": TopHeader
+  }
+};
+</script>
 
 <style lang="scss">
 #app {
@@ -16,17 +24,21 @@
   text-align: center;
   color: #2c3e50;
 }
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+.heading {
+  color: #50473d;
+  font-weight: bold;
+  position: relative;
+  margin-bottom: 20px;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    border-top: 2px solid #d5d5d5;
+    top: 50%;
+    left: -125px;
   }
+}
+section {
+  padding-top: 50px;
 }
 </style>
