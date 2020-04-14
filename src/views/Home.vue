@@ -1,9 +1,8 @@
 <template>
   <div>
-    <div id="banner">
+    <div>
       <b-carousel
         id="carousel-1"
-        v-model="slide"
         :interval="4000"
         indicators
         background="#ababab"
@@ -36,6 +35,7 @@
         </b-carousel-slide>
       </b-carousel>
     </div>
+    <banner></banner>
     <section>
       <b-container class="pt-4">
         <b-row>
@@ -45,7 +45,6 @@
       </b-container>
     </section>
     <featured></featured>
-
     <section>
       <premium-experience></premium-experience>
     </section>
@@ -59,6 +58,7 @@
 </template>
 
 <script>
+import Banner from "../components/home/Banner";
 import Mood from "../components/home/Mood.vue";
 import Traveling from "../components/home/Traveling.vue";
 import Featured from "../components/home/Featured";
@@ -68,6 +68,7 @@ import FeaturedIn from "../components/home/FeaturedIn";
 export default {
   name: "Home",
   components: {
+    banner: Banner,
     mood: Mood,
     traveling: Traveling,
     featured: Featured,
