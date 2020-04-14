@@ -1,7 +1,8 @@
 <template>
-  <div>
-    <div>
+  <div style ="position: relative;">
+    <div id="banner">
       <b-carousel
+      
         id="carousel-1"
         :interval="4000"
         indicators
@@ -9,33 +10,15 @@
         img-width="1024"
         img-height="300"
         style="text-shadow: 1px 1px 2px #333;"
+
       >
         <!-- Slide with blank fluid image to maintain slide aspect ratio -->
-        <b-carousel-slide img-blank img-alt="Blank image">
-          <template v-slot:img>
-            <img
-              class="d-block img-fluid w-100"
-              width="1024"
-              height="480"
-              src="../assets/banner.jpg"
-              alt="image slot"
-            />
-          </template>
-        </b-carousel-slide>
-        <b-carousel-slide img-blank img-alt="Blank image">
-          <template v-slot:img>
-            <img
-              class="d-block img-fluid w-100"
-              width="1024"
-              height="480"
-              src="../assets/banner.jpg"
-              alt="image slot"
-            />
-          </template>
-        </b-carousel-slide>
+       <bannerContent svg_banner = "banner1.png"/>
+       <bannerContent svg_banner = "banner2.png"/>
+        <bannerContent svg_banner = "banner1.png"/>
+       <bannerContent svg_banner = "banner2.png"/>
       </b-carousel>
     </div>
-    <banner></banner>
     <section>
       <b-container class="pt-4">
         <b-row>
@@ -58,7 +41,7 @@
 </template>
 
 <script>
-import Banner from "../components/home/Banner";
+import BannerContent from "../components/home/BannerContent.vue";
 import Mood from "../components/home/Mood.vue";
 import Traveling from "../components/home/Traveling.vue";
 import Featured from "../components/home/Featured";
@@ -68,7 +51,7 @@ import FeaturedIn from "../components/home/FeaturedIn";
 export default {
   name: "Home",
   components: {
-    banner: Banner,
+    bannerContent: BannerContent,
     mood: Mood,
     traveling: Traveling,
     featured: Featured,
